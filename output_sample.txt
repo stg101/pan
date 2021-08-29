@@ -1,0 +1,171 @@
+
+*  start
+|\
+| *  #<Class:CaseScrappers::Manager>#scrap /app/app/services/case_scrappers/manager.rb
+| |\
+| | *  #<Class:CaseScrappers::Manager>#check_site_status /app/app/services/case_scrappers/manager.rb
+| | |\
+| | | *  #<Class:CaseScrappers::Manager>#scrapping_site_errors /app/app/services/case_scrappers/manager.rb
+| | | |\
+| | | | *  #<Class:CaseScrappers::Manager>#url_host /app/app/services/case_scrappers/manager.rb
+| | | | *  #<Class:Util::Redis>#get /app/app/lib/util/redis.rb
+| | | | |\
+| | | | | *  #<Class:Util::Redis>#get_with_found /app/app/lib/util/redis.rb
+| | | | | |\
+| | | | | | *  #<Class:Util::Redis>#namespaced_connection /app/app/lib/util/redis.rb
+|\
+| *  #<Class:CaseScrappers::Manager>#scrapper_metadata /app/app/services/case_scrappers/manager.rb
+| |\
+| | *  #<Class:CaseScrappers::Base>#scrapping_queue /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  #<Class:CaseScrappers::Base>#class_name /app/app/services/case_scrappers/base.rb
+| |\
+| | *  #<Class:CaseScrappers::Base>#schedule_setting /app/app/services/case_scrappers/base.rb
+| | *  #<Class:CaseScrappers::Base>#schedule_setting_slow /app/app/services/case_scrappers/base.rb
+| | *  #<Class:CaseScrappers::Base>#parses_state? /app/app/services/case_scrappers/base.rb
+| | *  CaseScrappers::Colombia::Ramajudicial#initialize /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | *  CaseScrappers::Base#get_homepage /app/app/services/case_scrappers/base.rb
+|\
+| *  CaseScrappers::Colombia::Ramajudicial#initialize /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| *  CaseScrappers::Base#scrap /app/app/services/case_scrappers/base.rb
+| |\
+| | *  CaseScrappers::Base#init_scrap /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  #<Class:Util::Scrappers>#new_agent /app/app/lib/util/scrappers.rb
+| | | |\
+| | | | *  #<Class:Util::Scrappers>#proxy_agent /app/app/lib/util/scrappers.rb
+| | | | |\
+| | | | | *  #<Class:Util::Scrappers>#proxy_params /app/app/lib/util/scrappers.rb
+| | | | | |\
+| | | | | | *  #<Class:Util::Scrappers>#proxy_name_from /app/app/lib/util/scrappers.rb
+| | | | | | *  #<Class:Util::Scrappers>#proxy_configuration_for /app/app/lib/util/scrappers.rb
+| | | | | | |\
+| | | | | | | *  #<Class:Util::Scrappers>#proxy_from_rails_config /app/app/lib/util/scrappers.rb
+| | | | |\
+| | | | | *  #<Class:Util::Scrappers>#configure_static_ips /app/app/lib/util/scrappers.rb
+| | | | | *  #<Class:Util::Scrappers>#build_default_agent /app/app/lib/util/scrappers.rb
+| | | | | |\
+| | | | | | *  #<Class:Util::Scrappers>#mechanize_logger /app/app/lib/util/scrappers.rb
+| | | | | | |\
+| | | | | | | *  #<Class:Util::Scrappers>#mechanize_log_level /app/app/lib/util/scrappers.rb
+| | |\
+| | | *  CaseScrappers::Base#set_proxy /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  Metrics::WithMetrics#metrics_namespace /app/app/services/metrics/with_metrics.rb
+| | | | |\
+| | | | | *  Metrics::WithMetrics#class_to_namespace /app/app/services/metrics/with_metrics.rb
+| | | | | |\
+| | | | | | *  Metrics::WithMetrics#metrics_collector /app/app/services/metrics/with_metrics.rb
+| | | | | | |\
+| | | | | | | *  Metrics::WithMetrics::ClassMethods#metrics_collector /app/app/services/metrics/with_metrics.rb
+| | | | | |\
+| | | | | | *  #<Class:Metrics::Collector>#class_to_namespace /app/app/services/metrics/collector.rb
+| | |\
+| | | *  CaseScrappers::Base#load_homepage /app/app/services/case_scrappers/base.rb
+| | | *  CaseScrappers::Base#load_page /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  #<Class:Util::Scrappers>#url_to_params /app/app/lib/util/scrappers.rb
+| | | | *  Proxies::Colombia#get_page /app/app/services/proxies/colombia.rb
+| | | | |\
+| | | | | *  Proxies::Colombia#get_page_base /app/app/services/proxies/colombia.rb
+| | | | | |\
+| | | | | | *  Proxies::Base#build_agent /app/app/services/proxies/base.rb
+| | | | | | *  Mechanize::HTTP::Agent#fetch_with_retry /app/config/initializers/patches/mechanize.rb
+| | | | | | |\
+| | | | | | | *  Mechanize::HTTP::Agent#response_read /app/config/initializers/patches/mechanize.rb
+| | | | | | | *  Mechanize::HTTP::Agent#fetch_with_retry /app/config/initializers/patches/mechanize.rb
+| | | | | |\
+| | | | | | *  #<Class:Util::Scrappers>#url_to_params /app/app/lib/util/scrappers.rb
+| | | | |\
+| | | | | *  Proxies::Colombia#get_page_city /app/app/services/proxies/colombia.rb
+| | | | | |\
+| | | | | | *  Mechanize::HTTP::Agent#fetch_with_retry /app/config/initializers/patches/mechanize.rb
+| | | | | | *  Proxies::Colombia#ajax_to_page /app/app/services/proxies/colombia.rb
+| | | | |\
+| | | | | *  Proxies::Colombia#get_page_code /app/app/services/proxies/colombia.rb
+| | | | | |\
+| | | | | | *  Proxies::Colombia#get_page_case /app/app/services/proxies/colombia.rb
+| | | | | | |\
+| | | | | | | *  Mechanize::HTTP::Agent#fetch_with_retry /app/config/initializers/patches/mechanize.rb
+| | | | | | | *  Proxies::Colombia#ajax_to_page /app/app/services/proxies/colombia.rb
+| | |\
+| | | *  CaseScrappers::Colombia::Ramajudicial#validate_html /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | |\
+| | | | *  CaseScrappers::Colombia::Ramajudicial#online_data_path /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| |\
+| | *  CaseScrappers::Base#parse_case /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  CaseScrappers::Base#online_data /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  CaseScrappers::Colombia::Ramajudicial#parse_online_data /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | |\
+| | | | | *  CaseScrappers::Colombia::Ramajudicial#online_data_path /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | *  CaseScrappers::Base#strip /app/app/services/case_scrappers/base.rb
+| | | | | *  CaseScrappers::Colombia::Ramajudicial#parse_parties /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | |\
+| | | | | | *  CaseScrappers::Colombia::Ramajudicial#get_party_data /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | | |\
+| | | | | | | *  CaseScrappers::Base#strip /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  CaseScrappers::Base#case_attributes /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  CaseScrappers::Colombia::Ramajudicial#parse_attributes /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | |\
+| | | | | *  CaseScrappers::Base#parse_attributes /app/app/services/case_scrappers/base.rb
+| | | | | |\
+| | | | | | *  CaseScrappers::Base#online_data /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  CaseScrappers::Colombia::Ramajudicial#parse_parties /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | *  CaseScrappers::Base#case_movements /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  CaseScrappers::Base#fix_duplicate_movements /app/app/services/case_scrappers/base.rb
+| | | | |\
+| | | | | *  CaseScrappers::Base#filtered_and_filled_movements /app/app/services/case_scrappers/base.rb
+| | | | | |\
+| | | | | | *  CaseScrappers::Base#parse_movements /app/app/services/case_scrappers/base.rb
+| | | | | | |\
+| | | | | | | *  CaseScrappers::Colombia::Ramajudicial#get_movement_nodes /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | | | |\
+| | | | | | | | *  CaseScrappers::Base#strip /app/app/services/case_scrappers/base.rb
+| | | | | | |\
+| | | | | | | *  CaseScrappers::Colombia::Ramajudicial#node_to_movement /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | | | |\
+| | | | | | | | *  CaseScrappers::Base#strip /app/app/services/case_scrappers/base.rb
+| | | | | | | | *  CaseScrappers::Base#map_movement /app/app/services/case_scrappers/base.rb
+| | | | | | | | |\
+| | | | | | | | | *  CaseScrappers::Colombia::Ramajudicial#movement_attachments /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | | | |\
+| | | | | | *  CaseScrappers::Base#fill_movement /app/app/services/case_scrappers/base.rb
+| | | | | | |\
+| | | | | | | *  CaseScrappers::Base#clean_unique_key /app/app/services/case_scrappers/base.rb
+| | | | | | | |\
+| | | | | | | | *  CaseScrappers::Base#movement_unique_key /app/app/services/case_scrappers/base.rb
+| | | | | | | | *  #<Class:Util::Data>#clean_string /app/app/lib/util/data.rb
+| | | | | | | | |\
+| | | | | | | | | *  #<Class:Util::Data>#clean_string /app/app/lib/util/data.rb
+| | |\
+| | | *  CaseScrappers::Colombia::Ramajudicial#child_cases /app/app/services/case_scrappers/colombia/ramajudicial.rb
+| | | |\
+| | | | *  CaseScrappers::Base#metadata /app/app/services/case_scrappers/base.rb
+| | | | *  CaseScrappers::Base#set_metadata /app/app/services/case_scrappers/base.rb
+| | | | *  CaseFinders::Colombia::Ramajudicial#initialize /app/app/services/case_finders/colombia/ramajudicial.rb
+| | |\
+| | | *  CaseScrappers::Base#shared_events /app/app/services/case_scrappers/base.rb
+| | | *  CaseScrappers::Base#scrapping_extras /app/app/services/case_scrappers/base.rb
+| | | |\
+| | | | *  CaseScrappers::Base#validation_codes /app/app/services/case_scrappers/base.rb
+| | |\
+| | | *  CaseScrappers::Base#check_no_movements /app/app/services/case_scrappers/base.rb
+| |\
+| | *  Metrics::WithMetrics#metrics_increment /app/app/services/metrics/with_metrics.rb
+| | |\
+| | | *  Metrics::WithMetrics#metrics_namespace /app/app/services/metrics/with_metrics.rb
+| | | *  Metrics::WithMetrics#metrics_collector /app/app/services/metrics/with_metrics.rb
+| | | *  #<Class:Metrics::Collector>#increment /app/app/services/metrics/collector.rb
+|\
+| *  #<Class:CaseScrappers::Manager>#url_host /app/app/services/case_scrappers/manager.rb
+| *  #<Class:Util::Redis>#delete /app/app/lib/util/redis.rb
+| |\
+| | *  #<Class:Util::Redis>#namespaced_connection /app/app/lib/util/redis.rb
+
+
