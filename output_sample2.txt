@@ -1,0 +1,310 @@
+  |> start
+  |  |> #<CaseScrapperWorker:0x00007ff9f1ea9a50> CaseScrapperWorker#perform
+  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#find_class!
+  |  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#find_class
+  |  |  |  |  |> CaseScrappers::Brasil::Trf3 #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Ecuador::Esatje #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::TjaEstadoTamaulipas #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Peru::CejSupremo #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Peru::Indecopi #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Peru::Cej #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Tyba #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Cpnu #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Corte #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Ramajudicial #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Sic #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Superfinanciera #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Comercio #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Fiscalia #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Argentina::PjnPrivate #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Argentina::Mev #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Colombia::Supersociedades #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Argentina::Pjn #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Brasil::Stf #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::PjudCommon #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::OjvPjud #<Class:CaseScrappers::Chile::OjvPjud>#match_url?
+  |  |  |  |  |  |> CaseScrappers::Chile::OjvPjud #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::PjudBase #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::OjvSuprema #<Class:CaseScrappers::Chile::OjvPjud>#match_url?
+  |  |  |  |  |  |> CaseScrappers::Chile::OjvSuprema #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::PjCampeche #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::PjeZacatecasPrimeraInstancia #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::JlcaEstadoSonora #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::PjEstadoChihuahua #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::PjEstadoCoahuila #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::Tejabc #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Mexico::Pjfa #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresFamilia #<Class:CaseScrappers::Chile::OjvPjud>#match_url?
+  |  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresFamilia #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::OjvApelaciones #<Class:CaseScrappers::Chile::OjvPjud>#match_url?
+  |  |  |  |  |  |> CaseScrappers::Chile::OjvApelaciones #<Class:CaseScrappers::Base>#match_url?
+  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Chile::OjvPjud>#match_url?
+  |  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#match_url?
+  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#scrap
+  |  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#check_site_status
+  |  |  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#scrapping_site_errors
+  |  |  |  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#url_host
+  |  |  |  |  |  |> Util::Redis #<Class:Util::Redis>#get
+  |  |  |  |  |  |  |> Util::Redis #<Class:Util::Redis>#get_with_found
+  |  |  |  |  |  |  |  |> Util::Redis #<Class:Util::Redis>#namespaced_connection
+  |  |  |> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#scrapper_metadata
+  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#scrapping_queue
+  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#class_name
+  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#schedule_setting
+  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#schedule_setting_slow
+  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte #<Class:CaseScrappers::Base>#parses_state?
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fef10> CaseScrappers::Chile::OjvPjud#initialize
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fef10> CaseScrappers::Base#get_homepage
+  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#initialize
+  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#scrap
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#init_scrap
+  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#url_to_params
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#init_scrap
+  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#new_agent
+  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#proxy_agent
+  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#proxy_params
+  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#proxy_name_from
+  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#configure_static_ips
+  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#build_default_agent
+  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#mechanize_logger
+  |  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#mechanize_log_level
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#set_proxy
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_namespace
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#class_to_namespace
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_collector
+  |  |  |  |  |  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte Metrics::WithMetrics::ClassMethods#metrics_collector
+  |  |  |  |  |  |  |  |  |> Metrics::Collector #<Class:Metrics::Collector>#class_to_namespace
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#load_homepage
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#load_page
+  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#url_to_params
+  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Suscriptores#get_page
+  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Base#build_agent
+  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Suscriptores#page_endpoint
+  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Suscriptores#page_data
+  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#url_to_params
+  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::OjvBase#build_token
+  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Suscriptores#logged_page
+  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#decrypt
+  |  |  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#build_cipher
+  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::OjvBase#with_login
+  |  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::Base#build_agent
+  |  |  |  |  |  |  |  |  |  |> Util::Cache #<Class:Util::Cache>#fetch_with_found
+  |  |  |  |  |  |  |  |  |  |  |> Util::Redis #<Class:Util::Redis>#get_with_found
+  |  |  |  |  |  |  |  |  |  |  |  |> Util::Redis #<Class:Util::Redis>#namespaced_connection
+  |  |  |  |  |  |  |  |> #<Mechanize::HTTP::Agent:0x00007ff9f91f09c8> Mechanize::HTTP::Agent#fetch_with_retry
+  |  |  |  |  |  |  |  |  |> #<Mechanize::HTTP::Agent:0x00007ff9f91f09c8> Mechanize::HTTP::Agent#response_read
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#validate_html
+  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_case
+  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_case
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#online_data
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_online_data
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#case_attributes
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_attributes
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_attributes
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#online_data
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#find_court_id
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#match_option
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::PjudCommon#clean
+  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_pjud_court_name
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#online_data
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_parties
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#case_movements
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#fix_duplicate_movements
+  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#filtered_and_filled_movements
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_movements
+  |  |  |  |  |  |  |  |> Util::Scrappers #<Class:Util::Scrappers>#select_to_hash
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#set_file_state
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_movements
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#get_movement_nodes
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#node_to_movement
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#map_movement
+  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_attachments
+  |  |  |  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::OjvBase#token_to_param
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#proxy_file_url
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#attachments_js
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_title
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#node_to_movement
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#map_movement
+  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_attachments
+  |  |  |  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::OjvBase#token_to_param
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#proxy_file_url
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#attachments_js
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_title
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#node_to_movement
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#map_movement
+  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_attachments
+  |  |  |  |  |  |  |  |  |  |  |  |> #<Proxies::Suscriptores:0x00007ff9f8b7ec98> Proxies::OjvBase#token_to_param
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#strip
+  |  |  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#attachments_js
+  |  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_title
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_movements
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#get_movement_nodes
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_movements
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#get_movement_nodes
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_movements
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#get_movement_nodes
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#parse_movements
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#get_movement_nodes
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#parse_movements_receptor
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#fill_movement
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#clean_unique_key
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_unique_key
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#fill_movement
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#clean_unique_key
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_unique_key
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#fill_movement
+  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#clean_unique_key
+  |  |  |  |  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#movement_unique_key
+  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |  |  |  |  |  |  |  |> Util::Data #<Class:Util::Data>#clean_string
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#child_cases
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Chile::OjvPjud#shared_events
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#shared_events
+  |  |  |  |  |  |> JSON #<Class:JSON>#parse
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#scrapping_extras
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#validation_codes
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> CaseScrappers::Base#check_no_movements
+  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_increment
+  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_namespace
+  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#class_to_namespace
+  |  |  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_collector
+  |  |  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte Metrics::WithMetrics::ClassMethods#metrics_collector
+  |  |  |  |  |> Metrics::Collector #<Class:Metrics::Collector>#class_to_namespace
+  |  |  |> #<CaseScrappers::Chile::SuscriptoresCorte:0x00007ff9f90fca08> Metrics::WithMetrics#metrics_collector
+  |  |  |  |> CaseScrappers::Chile::SuscriptoresCorte Metrics::WithMetrics::ClassMethods#metrics_collector
+  |  |  |> Metrics::Collector #<Class:Metrics::Collector>#increment
+> CaseScrappers::Manager #<Class:CaseScrappers::Manager>#url_host
+> Util::Redis #<Class:Util::Redis>#delete
+  |> Util::Redis #<Class:Util::Redis>#namespaced_connection
+> #<CaseScrapperWorker:0x00007ff9f1ea9a50> BaseWorker#respond_to_ct
+  |> #<CaseScrapperWorker:0x00007ff9f1ea9a50> BaseWorker#save_result
+  |  |> #<CaseScrapperWorker:0x00007ff9f1ea9a50> BaseWorker#save_to_redis
+  |  |  |> #<CaseScrapperWorker:0x00007ff9f1ea9a50> BaseWorker#redis_default_result_path
+> #<CaseScrapperWorker:0x00007ff9f1ea9a50> BaseWorker#send_response

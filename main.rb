@@ -2,7 +2,7 @@
 
 class Pintor
   def initialize
-    @color_code = rand(1..231)
+    @color_code = rand(80..230)
   end
 
   def paint(text)
@@ -20,20 +20,22 @@ class Node
     active: 'active'
   }.freeze
 
-  attr_accessor :state, :name
+  attr_accessor :state, :name, :pintor, :parent
 
-  def initialize(name = '', state = STATES[:initial])
+  def initialize(name = '', state: STATES[:initial], parent: nil)
     @state = state
     @pintor = Pintor.new
     @name = name
+    @parent = parent
   end
 
   def draw
     @pintor.paint(@name)
+    parent_pintor = @parent&.pintor || Pintor.new
 
     case @state
     when STATES[:initial]
-      print @pintor.paint('->>') + " #{@name}"
+      print parent_pintor.paint('>') + " #{@name}"
     when STATES[:active]
       print @pintor.paint('  |')
     else
@@ -43,10 +45,6 @@ class Node
 
   def ==(other)
     name == other.name
-  end
-
-  def !=(other)
-    name != other.name
   end
 
   def next_state
@@ -60,14 +58,12 @@ class Node
 end
 
 def draw_trace
-  start = Node.new('', 'active')
+  start = Node.new('', state: 'active')
   branches = [start]
+  @edges[0].first.parent = start
   @edges.unshift [start, @edges[0].first]
 
   @edges.each_with_index do |edge, _index|
-    # p branches.map(&:name)
-    # p edge.map(&:name)
-
     branches.pop while edge.first != branches.last
 
     branches << edge.last
@@ -81,8 +77,8 @@ def draw_trace
 end
 
 def add_edges(event)
-  node_name = "#{event.defined_class}##{event.method_id} #{event.path}"
-  node = Node.new(node_name)
+  node_name = "#{event.self} #{event.defined_class}##{event.method_id}"
+  node = Node.new(node_name, parent: @stack.last)
   edge = [@stack.last, node]
 
   @stack << node
@@ -92,7 +88,6 @@ end
 def build_tracer(prefix = '')
   TracePoint.new(:call, :return) do |event|
     next if event.defined_class == self.class
-
     next unless event.path.include? prefix
 
     case event.event
@@ -104,7 +99,7 @@ def build_tracer(prefix = '')
   end
 end
 
-def pan
+def pan(prefix: '')
   unless block_given?
     puts 'Block required!'
     return
@@ -112,7 +107,7 @@ def pan
 
   @stack = [Node.new('start')]
   @edges = []
-  tracer ||= build_tracer
+  tracer ||= build_tracer(prefix)
 
   tracer.enable
   yield
