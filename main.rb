@@ -14,16 +14,79 @@ class Pintor
   end
 end
 
+class Node
+  STATES = {
+    initial: 'initial',
+    active: 'active'
+  }.freeze
+
+  attr_accessor :state, :name
+
+  def initialize(name = '', state = STATES[:initial])
+    @state = state
+    @pintor = Pintor.new
+    @name = name
+  end
+
+  def draw
+    @pintor.paint(@name)
+
+    case @state
+    when STATES[:initial]
+      print @pintor.paint('->>') + " #{@name}"
+    when STATES[:active]
+      print @pintor.paint('  |')
+    else
+      print ''
+    end
+  end
+
+  def ==(other)
+    name == other.name
+  end
+
+  def !=(other)
+    name != other.name
+  end
+
+  def next_state
+    case @state
+    when STATES[:initial]
+      @state = STATES[:active]
+    when STATES[:active]
+      @state = STATES[:active]
+    end
+  end
+end
+
+def draw_trace
+  start = Node.new('', 'active')
+  branches = [start]
+  @edges.unshift [start, @edges[0].first]
+
+  @edges.each_with_index do |edge, _index|
+    # p branches.map(&:name)
+    # p edge.map(&:name)
+
+    branches.pop while edge.first != branches.last
+
+    branches << edge.last
+
+    branches.each do |node|
+      node.draw
+      node.next_state
+    end
+    puts ''
+  end
+end
+
 def add_edges(event)
-  node = get_node_name(event)
+  node_name = "#{event.defined_class}##{event.method_id} #{event.path}"
+  node = Node.new(node_name)
   edge = [@stack.last, node]
 
   @stack << node
   @edges << edge
-end
-
-def get_node_name(event)
-  "#{event.defined_class}##{event.method_id} #{event.path}"
 end
 
 def build_tracer(prefix = '')
@@ -41,53 +104,13 @@ def build_tracer(prefix = '')
   end
 end
 
-def draw_trace
-  active_nodes = []
-  node_pintors = {}
-  @edges.unshift [nil, @edges[0].first]
-
-  @edges.each_with_index do |edge, index|
-    if active_nodes.last == edge.first
-      base = ''
-      active_nodes.each do |node|
-        p = node_pintors[node]
-        base += p.paint('| ')
-      end
-
-      puts base + "*  #{edge.last}"
-    else
-
-      # change of branch
-      if @edges[index - 1].last != edge.first
-        while active_nodes.pop != edge.first && !active_nodes.empty?
-        end
-      end
-
-      base = ''
-      active_nodes.each do |node|
-        p = node_pintors[node]
-        base += p.paint('| ')
-      end
-
-      active_nodes << edge.first
-      node_pintors[edge.first] ||= Pintor.new
-      node_pintors[edge.last] ||= Pintor.new
-
-      fp = node_pintors[active_nodes.last]
-      lp = node_pintors[edge.last]
-      puts base + fp.paint('|') + lp.paint('\\')
-      puts base + fp.paint('| ') + "*  #{edge.last}"
-    end
-  end
-end
-
-def pan()
+def pan
   unless block_given?
     puts 'Block required!'
     return
   end
 
-  @stack = ['start']
+  @stack = [Node.new('start')]
   @edges = []
   tracer ||= build_tracer
 
@@ -120,7 +143,12 @@ module Foo
 end
 
 pan { Foo.aaa }
-# @edges = [%w[start aaa], %w[start bbb], %w[start ccc]]
-# @edges = [%w[start aaa], %w[start bbb], %w[bbb ccc], %w[start ccc]]
-# @edges = [%w[start aaa]]
+
+# @edges = [
+#   [Node.new('start'), Node.new('aaa')],
+#   [Node.new('start'), Node.new('bbb')],
+#   [Node.new('bbb'), Node.new('ccc')],
+#   [Node.new('start'), Node.new('ccc')]
+# ]
+# draw_trace
 # puts @edges.to_s
