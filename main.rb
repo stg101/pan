@@ -139,11 +139,13 @@ end
 
 pan { Foo.aaa }
 
-# @edges = [
-#   [Node.new('start'), Node.new('aaa')],
-#   [Node.new('start'), Node.new('bbb')],
-#   [Node.new('bbb'), Node.new('ccc')],
-#   [Node.new('start'), Node.new('ccc')]
-# ]
-# draw_trace
-# puts @edges.to_s
+# Output :
+# |> start
+# |  |> Foo #<Class:Foo>#aaa
+# |  |  |> Foo #<Class:Foo>#bbb
+# |  |  |  |> Foo #<Class:Foo>#ccc
+# |  |  |  |> Foo #<Class:Foo>#ccc
+# |  |  |  |> Foo #<Class:Foo>#ccc
+# |  |  |  |> Foo #<Class:Foo>#ccc
+# |  |  |> Foo #<Class:Foo>#ccc
+# |  |> #<TracePoint:0x0000555bf582cb60> TracePoint#disable
