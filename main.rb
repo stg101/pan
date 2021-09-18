@@ -20,13 +20,20 @@ class Node
     active: 'active'
   }.freeze
 
-  attr_accessor :state, :name, :pintor, :parent
+  attr_accessor :state, :name, :pintor, :parent, :id, :return_value
 
-  def initialize(name = '', state: STATES[:initial], parent: nil)
+  def initialize(
+    name = '', id: '',
+    return_value: nil,
+    state: STATES[:initial],
+    parent: nil
+  )
     @state = state
     @pintor = Pintor.new
     @name = name
     @parent = parent
+    @id = id
+    @return_value = return_value
   end
 
   def draw
@@ -36,6 +43,7 @@ class Node
     case @state
     when STATES[:initial]
       print parent_pintor.paint('>') + " #{@name}"
+      print parent_pintor.paint('|') + " #{@return_value}"
     when STATES[:active]
       print @pintor.paint('  |')
     else
@@ -44,7 +52,7 @@ class Node
   end
 
   def ==(other)
-    name == other.name
+    @id == other.id
   end
 
   def next_state
@@ -77,8 +85,9 @@ def draw_trace
 end
 
 def add_edges(event)
-  node_name = "#{event.self} #{event.defined_class}##{event.method_id}"
-  node = Node.new(node_name, parent: @stack.last)
+  node_name = "#{event.self}.#{event.method_id}"
+  node_id = event.inspect
+  node = Node.new(node_name, id: node_id, parent: @stack.last)
   edge = [@stack.last, node]
 
   @stack << node
@@ -87,12 +96,12 @@ end
 
 def build_tracer(prefix = '')
   TracePoint.new(:call, :return) do |event|
-    next if event.defined_class == self.class
     next unless event.path.include? prefix
 
     case event.event
     when :return
-      @stack.pop
+      returned_node = @stack.pop
+      returned_node.return_value = event.return_value
     when :call
       add_edges(event)
     end
@@ -125,6 +134,7 @@ module Foo
   def aaa
     bbb
     ccc
+    { a: 1, b: 2 }
   end
 
   def bbb
@@ -134,10 +144,14 @@ module Foo
     ccc
   end
 
-  def ccc; end
+  def ccc
+    'ccc'
+  end
 end
 
 pan { Foo.aaa }
+
+# TODO: create cli to navigate trace
 
 # Output :
 # |> start
@@ -149,3 +163,18 @@ pan { Foo.aaa }
 # |  |  |  |> Foo #<Class:Foo>#ccc
 # |  |  |> Foo #<Class:Foo>#ccc
 # |  |> #<TracePoint:0x0000555bf582cb60> TracePoint#disable
+
+# binding : #<Binding:0x0000558a8d336748>
+# callee_id : aaa
+# defined_class : #<Class:Foo>
+# disable : true
+# enable : false
+# enabled? : true
+# event : return
+# inspect : #<TracePoint:return `aaa'@main.rb:160>
+# lineno : 160
+# method_id : aaa
+# path : main.rb
+# raised_exception :
+# return_value : value
+# self : Foo
